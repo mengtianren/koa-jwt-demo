@@ -22,7 +22,7 @@ app.use((ctx,next)=>{
 
 app.use(jwtKoa({secret}).unless({ path: [/^\/login/] }));
 
-  router.post('/api/login', async (ctx,next) => {
+  router.post('/login', async (ctx,next) => {
         let userToken = {
             name: 'mengtianren'
         }
@@ -33,7 +33,7 @@ app.use(jwtKoa({secret}).unless({ path: [/^\/login/] }));
             token
         }
 })
-.get('/api/userInfo', async (ctx) => {
+.get('/userInfo', async (ctx) => {
     const token = ctx.header.authorization  // 获取jwt
     let payload
     if (token) {
