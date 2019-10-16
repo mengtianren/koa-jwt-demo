@@ -1,1 +1,1 @@
-# koa-jwt-demo简单的登录效验实现
+# koa-jwt-demo简单的登录效验实现及环境配置
